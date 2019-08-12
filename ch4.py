@@ -26,4 +26,31 @@ def required_optional_params(first, second, third, fourth=4, fifth=10):
     return first+second+third+fourth+fifth
 
 
-print(required_optional_params(1, 2, 3))
+def function_one(first_num):
+    """
+    :param first_num: int
+    :return: float quotient of first_num divided by 2
+    """
+    return int(first_num)/2
+
+
+def function_two(second_num):
+    """
+    :param second_num: int
+    :return:
+    """
+    return int(second_num)*4
+
+
+def convert_str_to_float(string_to_convert):
+    """
+    :param string_to_convert: str
+    :return:
+    """
+    return float(string_to_convert)
+
+
+try:
+    print(convert_str_to_float('a' + 1))
+except (ValueError, TypeError):
+    print('Invalid parameter')
