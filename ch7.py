@@ -19,3 +19,26 @@ def print_items_and_indices(list_of_items):
 
 # print_items_and_indices(["The Walking Dead", "Entourage", "The Sopranos", "The Vampire Diaries"])
 
+def guess_a_number(list_of_nums):
+    n = 0
+    prompt = ''
+    while prompt != 'q':
+        print(list_of_nums)
+        prompt = input('Which number in the above list am I thinking of? (enter "q" to quit) ')
+        if prompt == 'q':
+            break
+        else:
+            try:
+                prompt = int(prompt)
+            except ValueError:
+                print('Entry must be an integer or the letter "q"')
+                break
+        if list_of_nums[n % len(list_of_nums)] == prompt:
+            print('You guessed it!')
+            break
+        else:
+            print("Nope, try again...")
+        n += 1
+
+
+# guess_a_number([1, 4, 5, 19, 81])
