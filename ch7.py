@@ -42,3 +42,15 @@ def guess_a_number(list_of_nums):
 
 
 # guess_a_number([1, 4, 5, 19, 81])
+
+def multiply_numbers():
+    list1 = [8, 19, 148, 4]
+    list2 = [9, 1, 33, 83]
+    list3 = []
+
+    for i, values in enumerate(list1):
+        list3.append(int(list1[i]) * int(list2[i]))
+    print(list3)
+
+
+# multiply_numbers()
