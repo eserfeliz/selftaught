@@ -16,6 +16,9 @@ class Stack:
     def __str__(self):
         return str(self.items)
 
+    def __len__(self):
+        return len(self.items)
+
     def is_empty(self):
         return self.items == []
 
@@ -24,7 +27,9 @@ class Stack:
         return self.items
 
     def pop(self):
-        return self.items.pop()
+        if not self.is_empty():
+            return self.items.pop(len(self.items)-1)
+        raise IndexError('pop from empty list')
 
     def peek(self):
         last = len(self.items) - 1
@@ -36,20 +41,14 @@ class Stack:
 
 def main():
     stack1 = Stack()
-    # print(stack1.is_empty())  # True
-    # stack1.push(1)
-    # print(stack1.is_empty())  # False
-    # print(stack1.pop())       # 1
-    # print(stack1.is_empty())  # True
     for i in range(0, 6):
         stack1.push(i)
-    # print(stack1.peek())      # 5        Item atop the stack
-    # print(stack1.size())      # 6        [0, 1, 2, 3, 4, 5]
-    # print(len(stack1))
-    # print(dir(stack1))
-    # for item in stack1:
-    #     print(str(item))
-    # print(str(stack1))
+
+    try:
+        for i in range(0, 7):
+            print(stack1.pop())
+    except IndexError as error:
+        print('Error: {}'.format(error))
 
 
 if __name__ is "__main__" or "ch21-1stack":
