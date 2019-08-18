@@ -44,5 +44,5 @@ class Hexagon:
         return 6 * self.length_of_side
 
 
-hexagon = Hexagon(5)
-print(hexagon.calculate_perimeter())
+# hexagon = Hexagon(5)
+# print(hexagon.calculate_perimeter())
