@@ -65,7 +65,7 @@ class Horse:
 # square.what_am_i()
 # rect.what_am_i()
 
-chuck = Rider('Chuck Norris')
-betsy = Horse('Betsy', chuck)
-
-print(betsy.rider.name)
+# chuck = Rider('Chuck Norris')
+# betsy = Horse('Betsy', chuck)
+#
+# print(betsy.rider.name)
